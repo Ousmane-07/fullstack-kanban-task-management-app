@@ -5,7 +5,7 @@ import sun from '../../client/starter-code/assets/icon-light-theme.svg'
 import moon from '../../client/starter-code/assets/icon-dark-theme.svg'
 import eyeslash from '../../client/starter-code/assets/icon-hide-sidebar.svg'
 import darkmodeLogo from '../../client/starter-code/assets/dark-mode-logo.svg'
-import revealSideBar from '../../client/starter-code/assets/show-sidebar.svg'
+import eye from '../../client/starter-code/assets/eye-img.svg'
 
 
 type SideBarProperties = { 
@@ -70,7 +70,7 @@ function Sidebar({themeToggle, isDark, hideSideBar, showSideBar, isHidden}: Side
           onClick={showSideBar}
           aria-label="Show sidebar"
         >
-          <img src={revealSideBar} alt="" />
+          <img src={eye} alt="" />
         </button>
       )}
         </>
