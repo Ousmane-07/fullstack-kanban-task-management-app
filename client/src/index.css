@@ -56,10 +56,11 @@ img {
 .dark-mode { 
 --sidebar-and-nav-color:var(--black-3);
 --background-color:var(--black-2);
-
+--stroke-color:var(--dark-grey);
 }
 
 .light-mode { 
 --sidebar-and-nav-color:var(--white);
 --background-color:var(--very-light-grey);
+--stroke-color:var(--light-grey);
 }
