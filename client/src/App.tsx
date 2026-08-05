@@ -20,7 +20,9 @@ function App() {
 
   return (
     <>
+    <div className={isDark ? 'dark-mode' : 'light-mode'}>
      <Sidebar themeToggle={themeToggle} isDark={isDark} />
+     </div>
     </>
   )
 }

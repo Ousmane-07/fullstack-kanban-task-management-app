@@ -6,9 +6,11 @@
     box-sizing:border-box;
 }
 
-body { 
+.dark-mode,
+.light-mode { 
+    min-height: 100vh;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background:var(--very-light-grey);
+    background:var(--background-color);
 }
 
 img { 
@@ -49,4 +51,15 @@ img {
   --fs-18: calc(15 / 16 * 1rem);
   --fs-16: calc(13 / 16 * 1rem);
   --fs-14: calc(12 / 16 * 1rem);
+}
+
+.dark-mode { 
+--sidebar-and-nav-color:var(--black-3);
+--background-color:var(--black-2);
+
+}
+
+.light-mode { 
+--sidebar-and-nav-color:var(--white);
+--background-color:var(--very-light-grey);
 }

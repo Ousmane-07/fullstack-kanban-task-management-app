@@ -2,7 +2,7 @@
     position:fixed;
     top:0;
     left:0;
-    background:var(--white);
+    background:var(--sidebar-and-nav-color);
     width:300px;
     height:100%;
 }
@@ -54,7 +54,7 @@
     display:flex; 
     gap:15px;
     height:48px;
-    background:var(--very-light-grey);
+    background:var(--background-color);
     border-radius:6px;
     align-items:center;
     justify-content:center;
@@ -74,6 +74,7 @@
     background:var(--dark-purple);
     border-radius:40px 40px 40px 40px;
     cursor:pointer;
+    
 }
 
 .toggle-button { 
@@ -89,4 +90,8 @@
 
 .toggle-button.isDark { 
     transform:translateX(20px);
+}
+
+.hide-sidebar-text { 
+    color:var(--grey)
 }

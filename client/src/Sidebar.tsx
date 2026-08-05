@@ -4,20 +4,21 @@ import BoardIcon from '../../client/starter-code/assets/icon-board.svg?react'
 import sun from '../../client/starter-code/assets/icon-light-theme.svg'
 import moon from '../../client/starter-code/assets/icon-dark-theme.svg'
 import eyeslash from '../../client/starter-code/assets/icon-hide-sidebar.svg'
+import darkmodeLogo from '../../client/starter-code/assets/dark-mode-logo.svg'
 
-
-type themeProperties = { 
+type ThemeProperties = { 
     themeToggle: () => void;
     isDark: boolean;
 }
 
-function Sidebar({themeToggle, isDark}: themeProperties) { 
+function Sidebar({themeToggle, isDark}: ThemeProperties) { 
 
 
     return ( 
         <>
         <div className="sidebar-container">
-            <img src={logo} className="kanban-logo" alt="" />
+            {isDark ? <img src={darkmodeLogo} className="kanban-logo" alt="" /> 
+            : <img src={logo} className="kanban-logo" alt="" />}
             <div className="sidebar-container-flex">
                 <div className="sidebar-top-section">
                     <p className="all-boards-header">ALL BOARDS (3)</p>
@@ -41,14 +42,14 @@ function Sidebar({themeToggle, isDark}: themeProperties) {
                 <div className="sidebar-bottom-section">
                 <div className="theme-toggle-container">
                     <img src={sun} alt="" />
-                    <div className="toggle-container">
-                        <div className={`toggle-button ${isDark ? "isDark" : "" }`} onClick={themeToggle}></div>
+                    <div className="toggle-container" onClick={themeToggle}>
+                        <div className={`toggle-button ${isDark ? 'isDark' : ''}`} ></div>
                     </div>
                     <img src={moon} alt="" />
                 </div>
                 <div className="hide-sidebar-button">
                     <img src={eyeslash} alt="" />
-                    <p>Hide Sidebar</p>
+                    <p className="hide-sidebar-text">Hide Sidebar</p>
                     </div>
                 </div>
 
