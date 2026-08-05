@@ -1,11 +1,11 @@
 import './Sidebar.css'
-import logo from '../../client/starter-code/assets/kanban-logo.svg'
-import BoardIcon from '../../client/starter-code/assets/icon-board.svg?react'
-import sun from '../../client/starter-code/assets/icon-light-theme.svg'
-import moon from '../../client/starter-code/assets/icon-dark-theme.svg'
-import eyeslash from '../../client/starter-code/assets/icon-hide-sidebar.svg'
-import darkmodeLogo from '../../client/starter-code/assets/dark-mode-logo.svg'
-import eye from '../../client/starter-code/assets/eye-img.svg'
+import logo from '../../../client/starter-code/assets/kanban-logo.svg'
+import BoardIcon from '../../../client/starter-code/assets/icon-board.svg?react'
+import sun from '../../../client/starter-code/assets/icon-light-theme.svg'
+import moon from '../../../client/starter-code/assets/icon-dark-theme.svg'
+import eyeslash from '../../../client/starter-code/assets/icon-hide-sidebar.svg'
+import darkmodeLogo from '../../../client/starter-code/assets/dark-mode-logo.svg'
+import eye from '../../../client/starter-code/assets/eye-img.svg'
 
 
 type SideBarProperties = { 

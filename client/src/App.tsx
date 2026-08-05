@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Sidebar from './Sidebar.tsx'
+import Sidebar from './Sidebar/Sidebar.tsx'
 import './App.css'
 
 
