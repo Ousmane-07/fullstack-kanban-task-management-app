@@ -5,18 +5,26 @@ import sun from '../../client/starter-code/assets/icon-light-theme.svg'
 import moon from '../../client/starter-code/assets/icon-dark-theme.svg'
 import eyeslash from '../../client/starter-code/assets/icon-hide-sidebar.svg'
 import darkmodeLogo from '../../client/starter-code/assets/dark-mode-logo.svg'
+import revealSideBar from '../../client/starter-code/assets/show-sidebar.svg'
 
-type ThemeProperties = { 
-    themeToggle: () => void;
+
+type SideBarProperties = { 
     isDark: boolean;
+    isHidden: boolean;
+    themeToggle: () => void;
+    hideSideBar: () => void;
+    showSideBar: () => void;
+    
 }
 
-function Sidebar({themeToggle, isDark}: ThemeProperties) { 
+
+
+function Sidebar({themeToggle, isDark, hideSideBar, showSideBar, isHidden}: SideBarProperties) { 
 
 
     return ( 
         <>
-        <div className="sidebar-container">
+        <div className={isHidden ? "hidden" : "sidebar-container"}>
             {isDark ? <img src={darkmodeLogo} className="kanban-logo" alt="" /> 
             : <img src={logo} className="kanban-logo" alt="" />}
             <div className="sidebar-container-flex">
@@ -47,7 +55,7 @@ function Sidebar({themeToggle, isDark}: ThemeProperties) {
                     </div>
                     <img src={moon} alt="" />
                 </div>
-                <div className="hide-sidebar-button">
+                <div className="hide-sidebar-button" onClick={hideSideBar}>
                     <img src={eyeslash} alt="" />
                     <p className="hide-sidebar-text">Hide Sidebar</p>
                     </div>
@@ -55,6 +63,16 @@ function Sidebar({themeToggle, isDark}: ThemeProperties) {
 
             </div>
         </div>
+         {isHidden && (
+        <button
+          type="button"
+          className="show-sidebar-button"
+          onClick={showSideBar}
+          aria-label="Show sidebar"
+        >
+          <img src={revealSideBar} alt="" />
+        </button>
+      )}
         </>
     )
 }
