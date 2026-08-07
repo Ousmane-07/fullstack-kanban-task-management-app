@@ -1,12 +1,43 @@
 .grid-wrapper { 
     min-height: 100vh;
     width:calc(100% - 300px);
-    background:blue;
     margin-left:300px;
+    padding:20px;
 }
 
 
 .grid-wrapper.sidebar-hidden { 
     margin-left:0;
     width:100%;
+}
+
+.grid-container { 
+width:75%;
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+column-gap:25px;
+row-gap:25px;
+}
+
+.column-tasks { 
+background: var(--sidebar-and-nav-color);
+box-shadow: 0px 4px 6px rgba(54, 78, 126, 0.101545);
+border-radius: 8px;
+padding:20px 15px;
+
+}
+
+.column-title { 
+    margin-bottom:15px;
+}
+
+.task-card p { 
+    font-size:var(--fs-15);
+    font-weight:600;
+    color:var(--font-color);
+    margin-bottom:10px;
+}
+
+.sub-tasks p, .column-title { 
+    color:var(--grey);
 }

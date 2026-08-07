@@ -25,12 +25,6 @@ const columns: Column[] = [
         completedSubtasks: 0,
         totalSubtasks: 3,
       },
-      {
-        id: 2,
-        title: "Build UI for search",
-        completedSubtasks: 1,
-        totalSubtasks: 2,
-      },
     ],
   },
   {
@@ -48,7 +42,14 @@ const columns: Column[] = [
   {
     id: 3,
     name: "DONE",
-    tasks: [],
+    tasks: [
+      {
+        id: 4,
+        title: "Conduct 5 wireframe tests",
+        completedSubtasks: 1,
+        totalSubtasks: 1
+      }
+    ],
   },
 ];
 
