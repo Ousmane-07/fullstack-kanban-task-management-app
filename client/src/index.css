@@ -50,6 +50,7 @@ img {
   --fs-20: calc(18 / 16 * 1rem);
   --fs-18: calc(15 / 16 * 1rem);
   --fs-16: calc(13 / 16 * 1rem);
+  --fs-15: calc(15 / 16 * 1rem);
   --fs-14: calc(12 / 16 * 1rem);
 }
 
@@ -57,10 +58,12 @@ img {
 --sidebar-and-nav-color:var(--black-3);
 --background-color:var(--black-2);
 --stroke-color:var(--dark-grey);
+--font-color:var(--white);
 }
 
 .light-mode { 
 --sidebar-and-nav-color:var(--white);
 --background-color:var(--very-light-grey);
 --stroke-color:var(--light-grey);
+--font-color:var(--black-1);
 }

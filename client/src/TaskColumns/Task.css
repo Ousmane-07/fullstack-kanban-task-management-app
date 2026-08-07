@@ -1,0 +1,12 @@
+.grid-wrapper { 
+    min-height: 100vh;
+    width:calc(100% - 300px);
+    background:blue;
+    margin-left:300px;
+}
+
+
+.grid-wrapper.sidebar-hidden { 
+    margin-left:0;
+    width:100%;
+}

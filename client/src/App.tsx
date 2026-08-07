@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar/Sidebar.tsx'
+import TopNav from './TopNav/TopNav.tsx'
 import './App.css'
+import Task from './TaskColumns/Task.tsx'
 
 
 
@@ -36,6 +38,8 @@ function App() {
      <Sidebar themeToggle={themeToggle} isDark={isDark}
      hideSideBar={hideSideBar} showSideBar={showSideBar}
      isHidden={isHidden} />
+     < TopNav isDark={isDark} />
+     < Task isHidden={isHidden} />
      </div>
     </>
   )
