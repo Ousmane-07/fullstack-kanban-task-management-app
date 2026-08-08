@@ -59,6 +59,7 @@ img {
 --background-color:var(--black-2);
 --stroke-color:var(--dark-grey);
 --font-color:var(--white);
+--new-column-section:linear-gradient(180deg, rgba(43, 44, 55, 0.25) 0%, rgba(43, 44, 55, 0.125) 100%);
 }
 
 .light-mode { 
@@ -66,4 +67,8 @@ img {
 --background-color:var(--very-light-grey);
 --stroke-color:var(--light-grey);
 --font-color:var(--black-1);
+--new-column-section:linear-gradient(180deg, #E9EFFA 0%, rgba(233, 239, 250, 0.5) 100%);
 }
+
+
+ 

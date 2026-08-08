@@ -3,6 +3,9 @@
     width:calc(100% - 300px);
     margin-left:300px;
     padding:20px;
+    transition:0.3s;
+
+    overflow-x: auto;
 }
 
 
@@ -12,11 +15,11 @@
 }
 
 .grid-container { 
-width:75%;
 display:grid;
-grid-template-columns:repeat(3, 1fr);
-column-gap:25px;
-row-gap:25px;
+grid-auto-flow: column;
+grid-template-columns:280px;
+gap:25px;
+width: max-content;
 }
 
 .column-tasks { 
@@ -29,6 +32,7 @@ padding:20px 15px;
 
 .column-title { 
     margin-bottom:15px;
+    letter-spacing:2px;
 }
 
 .task-card p { 
@@ -39,5 +43,32 @@ padding:20px 15px;
 }
 
 .sub-tasks p, .column-title { 
+    color:var(--grey);
+}
+
+.status-circle { 
+    width:15px;
+    height:15px;
+    border-radius:100%;
+    
+}
+
+.top-column-flex { 
+    display:flex;
+    gap:15px;
+}
+
+.add-new-column-section { 
+background:var(--new-column-section);
+border-radius:6px;
+width:280px;
+height:814px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.add-new-column-section p { 
+    font-size:var(--fs-24);
     color:var(--grey);
 }

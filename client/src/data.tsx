@@ -8,6 +8,7 @@ export type Task = {
 export type Column = { 
     id: number;
     name: string;
+    color: string;
     tasks: Task[]
 }
 
@@ -18,6 +19,7 @@ const columns: Column[] = [
   {
     id: 1,
     name: "TODO",
+    color:"#49C4E5",
     tasks: [
       {
         id: 1,
@@ -30,6 +32,7 @@ const columns: Column[] = [
   {
     id: 2,
     name: "DOING",
+    color: "#8471F2",
     tasks: [
       {
         id: 3,
@@ -42,6 +45,7 @@ const columns: Column[] = [
   {
     id: 3,
     name: "DONE",
+    color: "#67E2AE",
     tasks: [
       {
         id: 4,

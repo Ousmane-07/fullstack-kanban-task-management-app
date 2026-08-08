@@ -15,8 +15,9 @@ function Task({isHidden}: GridProperties) {
         <div className="grid-container">
             {data.map((column) => (
     <div className="column" key={column.id}>
-        <p className="column-title">{column.name}</p>
-
+        <div className="top-column-flex">
+        <div className="status-circle" style={{backgroundColor: column.color}}></div><p className="column-title">{column.name} ({column.tasks.length})</p>
+    </div>
         <div className="column-tasks">
             {column.tasks.map((task) => (
                 <div className="task-card" key={task.id}>
@@ -30,6 +31,7 @@ function Task({isHidden}: GridProperties) {
         </div>
     </div>
 ))}
+<div className="add-new-column-section"><p>+New Column</p></div>
         </div>
     </div>
 )
