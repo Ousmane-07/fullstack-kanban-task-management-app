@@ -1,4 +1,7 @@
 import './TaskModal.css'
+import exitSymbol from '../../../client/starter-code/assets/Xsymbol.svg'
+
+
 
 type ModalProperties = { 
     isOpen: boolean
@@ -12,8 +15,8 @@ function Modal({isOpen, closeModal} : ModalProperties) {
     }
 
     return ( 
-        <div className="modal-wrapper">
-            <div className="modal-window">
+        <div className="modal-wrapper" onClick={closeModal}>
+            <div className="modal-window"  onClick={(event) => event.stopPropagation()}>
                 <p className="modal-header">Add New Board</p>
                 <div className="name-input">
                     <p>Name</p>
@@ -21,13 +24,15 @@ function Modal({isOpen, closeModal} : ModalProperties) {
                 </div>
                 <p className="modal-column-section-header">Columns</p>
                 <div className="column-detail-selection">
-                  <div className="column-selector">
+                  <div className="column-input">
+                    <input type="text" />
+                    <img src={exitSymbol} alt="" />
                     </div> 
                     <div className="modal-new-column">
-                        <p>+ Add New Column</p>
+                        <button>+Add New Column</button>
                     </div>
                     <div className="modal-create-new-board-btn">
-                        Create New Board
+                        <button>Create New Board</button>
                     </div>
                 </div>
             </div>
