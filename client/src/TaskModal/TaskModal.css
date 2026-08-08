@@ -1,0 +1,49 @@
+.modal-wrapper { 
+inset:0;
+position:fixed;
+background: rgba(0, 0, 0, 0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.name-input { 
+    margin-bottom:25px;
+}
+
+.modal-window { 
+    background:var(--sidebar-and-nav-color);
+    padding:35px;
+    border-radius:6px;
+}
+
+.modal-header { 
+    color:var(--font-color);
+    font-size:var(--fs-18);
+    font-weight:600;
+    margin-bottom:20px;
+    z-index:999;
+}
+
+.modal-column-section-header { 
+    color:var(--grey);
+    font-size:var(--fs-12);
+    font-weight:600;
+}
+
+.name-input p { 
+    color:var(--grey);
+    font-size:var(--fs-12);
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+.name-input input { 
+   width:416px;
+   height:40px;
+   border:1px solid #828FA3;
+   padding-left:10px;
+   outline:none;
+   border-radius:6px;
+}

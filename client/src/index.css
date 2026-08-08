@@ -51,7 +51,8 @@ img {
   --fs-18: calc(15 / 16 * 1rem);
   --fs-16: calc(13 / 16 * 1rem);
   --fs-15: calc(15 / 16 * 1rem);
-  --fs-14: calc(12 / 16 * 1rem);
+  --fs-14: calc(14 / 16 * 1rem);
+  --fs-12: calc(12 / 16 * 1rem);
 }
 
 .dark-mode { 

@@ -3,7 +3,7 @@ import Sidebar from './Sidebar/Sidebar.tsx'
 import TopNav from './TopNav/TopNav.tsx'
 import './App.css'
 import Task from './TaskColumns/Task.tsx'
-
+import Modal from './TaskModal/TaskModal.tsx'
 
 
 
@@ -14,8 +14,11 @@ import Task from './TaskColumns/Task.tsx'
 function App() {
 
   // useStates 
-   const [isDark, SetDark] = useState(false)
-   const [isHidden, setSideBar] = useState(false)
+
+   const [isDark, SetDark] = useState<boolean>(false)
+   const [isHidden, setSideBar] = useState<boolean>(false)
+  const [isOpen, setOpen] = useState<boolean>(false)
+
 
   // Functions 
 
@@ -31,6 +34,13 @@ function App() {
     setSideBar(false);
   }
 
+  function showModal() { 
+  setOpen(true)
+}
+
+  function closeModal() { 
+  setOpen(false)
+}
 
   return (
     <>
@@ -39,7 +49,8 @@ function App() {
      hideSideBar={hideSideBar} showSideBar={showSideBar}
      isHidden={isHidden} />
      < TopNav isDark={isDark} />
-     < Task isHidden={isHidden} />
+     < Task isHidden={isHidden} showModal={showModal} />
+     < Modal isOpen={isOpen} closeModal={closeModal}  / >
      </div>
     </>
   )

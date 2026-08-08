@@ -3,10 +3,11 @@ import data from '../../../client/src/data.tsx'
 
 type GridProperties = { 
 isHidden:boolean
+showModal:() => void
 }
 
 
-function Task({isHidden}: GridProperties) { 
+function Task({isHidden, showModal}: GridProperties) { 
 
     
 
@@ -31,9 +32,11 @@ function Task({isHidden}: GridProperties) {
         </div>
     </div>
 ))}
-<div className="add-new-column-section"><p>+New Column</p></div>
+<div className="add-new-column-section" onClick={showModal}><p>+New Column</p></div>
         </div>
     </div>
+
+
 )
 }
 
