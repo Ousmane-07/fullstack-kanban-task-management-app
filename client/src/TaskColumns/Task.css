@@ -62,10 +62,11 @@ padding:20px 15px;
 background:var(--new-column-section);
 border-radius:6px;
 width:280px;
-height:814px;
+min-height:814px;
 display:flex;
 justify-content:center;
 align-items:center;
+cursor:pointer;
 }
 
 .add-new-column-section p { 
