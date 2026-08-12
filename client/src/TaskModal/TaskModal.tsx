@@ -13,7 +13,14 @@ function Modal({isOpen, closeModal} : ModalProperties) {
 
 const [name, setName] = useState<string>("")
 const [error, setError] = useState<boolean>(false)
+const [columns, setColumns] = useState([""]);
+
     
+
+    function addColumn() { 
+        setColumns([...columns, ""]);
+    }
+
     function handleCreateBoard() {
   if (!name.trim()) {
     setError(true);
@@ -38,12 +45,15 @@ const [error, setError] = useState<boolean>(false)
                 </div>
                 <p className="modal-column-section-header">Columns</p>
                 <div className="column-detail-selection">
-                  <div className="column-input">
-                    <input type="text"  />
+                  {columns.map((column, index) => ( 
+                    <div className="column-input">
+                        <input type="text" value={column} key={index} />
+                    
                     <img src={exitSymbol} alt="" />
-                    </div> 
+                    </div>)
+                )} 
                     <div className="modal-new-column">
-                        <button>+Add New Column</button>
+                        <button onClick={addColumn}>+Add New Column</button>
                     </div>
                     <div className="modal-create-new-board-btn" onClick={handleCreateBoard }>
                         <button>Create New Board</button>
