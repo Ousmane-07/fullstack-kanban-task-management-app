@@ -8,10 +8,12 @@ import threeDots from '../../../client/starter-code/assets/3dots.svg'
 
 type TopNavProperties = { 
     isDark: boolean;
+    showTaskModal: () => void;
+    
 }
 
 
-function TopNav({isDark}: TopNavProperties) { 
+function TopNav({isDark, showTaskModal}: TopNavProperties) { 
 
 
     return(
@@ -24,7 +26,7 @@ function TopNav({isDark}: TopNavProperties) {
             <div className="top-nav-section">
                 <p>Platform Launch</p>
                 <div className="top-nav-right-section">
-                    <button>
+                    <button onClick={showTaskModal}>
                         +Add New Task
                     </button>
                     <img src={threeDots} alt="" className="three-dots" />

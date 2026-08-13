@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './TaskModal.css'
+import './BoardModal.css'
 import exitSymbol from '../../../client/starter-code/assets/Xsymbol.svg'
 
 
@@ -9,7 +9,7 @@ type ModalProperties = {
     closeModal: () => void;
 }
 
-function Modal({isOpen, closeModal} : ModalProperties) { 
+function BoardModal({isOpen, closeModal} : ModalProperties) { 
 
 const [name, setName] = useState<string>("")
 const [error, setError] = useState<boolean>(false)
@@ -19,6 +19,12 @@ const [columns, setColumns] = useState([""]);
 
     function addColumn() { 
         setColumns([...columns, ""]);
+    }
+
+    function removeColumn(index: number) { 
+        const updatedColumns = columns.filter((_, currentIndex) => currentIndex !== index);
+
+        setColumns(updatedColumns);
     }
 
     function handleCreateBoard() {
@@ -46,10 +52,10 @@ const [columns, setColumns] = useState([""]);
                 <p className="modal-column-section-header">Columns</p>
                 <div className="column-detail-selection">
                   {columns.map((column, index) => ( 
-                    <div className="column-input">
-                        <input type="text" value={column} key={index} />
+                    <div className="column-input" key={index}>
+                        <input type="text" value={column}  />
                     
-                    <img src={exitSymbol} alt="" />
+                    <img src={exitSymbol} alt="" onClick={() => removeColumn(index)} />
                     </div>)
                 )} 
                     <div className="modal-new-column">
@@ -66,4 +72,4 @@ const [columns, setColumns] = useState([""]);
 
 
 
-export default Modal
+export default BoardModal
