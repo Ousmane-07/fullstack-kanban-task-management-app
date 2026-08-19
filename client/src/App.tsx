@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar/Sidebar.tsx'
 import TopNav from './TopNav/TopNav.tsx'
-import './App.css'
+import TaskModal from './TaskModal/TaskModal.tsx'
 import Task from './TaskColumns/Task.tsx'
 import BoardModal from './BoardModal/BoardModal.tsx'
-
+import './App.css'
 
 
 
@@ -18,11 +18,12 @@ function App() {
    const [isDark, SetDark] = useState<boolean>(false)
    const [isHidden, setSideBar] = useState<boolean>(false)
    const [isOpen, setOpen] = useState<boolean>(false)
-  const [isTaskModalOpen, setTaskModalOpen] = useState<boolean>(false)
+   const [isTaskModalOpen, setTaskModalOpen] = useState<boolean>(false)
+   
   // Functions 
 
    function themeToggle() { 
-  SetDark(!isDark)
+  SetDark(!isDark)  
 }
 
   function hideSideBar() { 
@@ -58,6 +59,7 @@ function closeTaskModal() {
      < TopNav isDark={isDark} showTaskModal={showTaskModal} />
      < Task isHidden={isHidden} showModal={showModal} />
      < BoardModal isOpen={isOpen} closeModal={closeModal}  / >
+     < TaskModal isTaskModalOpen={isTaskModalOpen} closeTaskModal={closeTaskModal} />
      </div>
     </>
   )

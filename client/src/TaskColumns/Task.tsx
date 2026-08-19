@@ -9,7 +9,7 @@ showModal:() => void
 
 function Task({isHidden, showModal}: GridProperties) { 
 
-    
+
 
     return ( 
     <div className={`grid-wrapper ${isHidden ? "sidebar-hidden" : ""}`}>

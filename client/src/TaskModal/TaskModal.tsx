@@ -59,7 +59,7 @@ function TaskModal({closeTaskModal, isTaskModalOpen}: TaskModalProperties) {
 
     }
 
-    
+
 
     if(!isTaskModalOpen) { 
         return null;
@@ -83,7 +83,7 @@ function TaskModal({closeTaskModal, isTaskModalOpen}: TaskModalProperties) {
                   {subTasks.map((subTask: string, index: number) => ( 
                     <div className="column-input" key={index}>
                         <input type="text" value={subTask} className={subTaskError && !subTask.trim() ? "error" : ""} onChange={(e) => updateSubTask(index, e.target.value)} />
-                    
+
                     <img src={exitSymbol} alt="" onClick={() => removeSubTask(index)} />
                     </div>)
                 )} 
