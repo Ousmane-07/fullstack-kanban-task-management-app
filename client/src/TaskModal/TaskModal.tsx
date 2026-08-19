@@ -80,6 +80,7 @@ function TaskModal({closeTaskModal, isTaskModalOpen}: TaskModalProperties) {
                      This 15 minute break will recharge the batteries a little." value={description} onChange={(e) => setDescription(e.target.value)} />
                 </div>
                 <div className="task-substasks-section">
+                    <p className="subtasks-header">Subtasks</p>
                   {subTasks.map((subTask: string, index: number) => ( 
                     <div className="column-input" key={index}>
                         <input type="text" value={subTask} className={subTaskError && !subTask.trim() ? "error" : ""} onChange={(e) => updateSubTask(index, e.target.value)} />
